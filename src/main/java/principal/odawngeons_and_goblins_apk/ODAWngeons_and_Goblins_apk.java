@@ -12,7 +12,7 @@ public class ODAWngeons_and_Goblins_apk {
         return combatOn;
     }
 
-    public static void main(String[] args) {
+    public void menu() {
         player Efe = new player("Efe", 'A');
 
         //insertar en un bucle
