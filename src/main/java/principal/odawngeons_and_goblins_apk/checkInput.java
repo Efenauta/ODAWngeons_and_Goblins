@@ -15,10 +15,12 @@ public class checkInput {
         while (option == ' ') {
             System.out.println("[a]Luchar     [b]Inventario     [c]Salir");
             System.out.print("Elige una opción: ");
+            testInput = sc.nextLine();
             try {
-                option = sc.nextLine().charAt(0);
+                if (testInput.length() == 1) {
+                    option = testInput.charAt(0);
+                }
             } catch (NumberFormatException InvalidOption) {
-                System.out.println("Elige una opción válida.");
             }
             if (option != 'a' && option != 'b' && option != 'c' && option != ' ') {
                 System.out.println("Opción no encontrada.");

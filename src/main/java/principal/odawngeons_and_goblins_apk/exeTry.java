@@ -4,6 +4,6 @@ public class exeTry {
 
     public static void main(String[] args) {
         ODAWngeons_and_Goblins_apk game = new ODAWngeons_and_Goblins_apk();
-        game.menu();
+        game.game();
     }
 }

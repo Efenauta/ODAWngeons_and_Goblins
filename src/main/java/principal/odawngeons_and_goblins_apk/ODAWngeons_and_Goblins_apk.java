@@ -1,7 +1,5 @@
 package principal.odawngeons_and_goblins_apk;
 
-/*By Efenauta
-Test GitHub Clase*/
 public class ODAWngeons_and_Goblins_apk {
 
     private static boolean gameOn = true, combatOn = false;
@@ -12,7 +10,8 @@ public class ODAWngeons_and_Goblins_apk {
         return combatOn;
     }
 
-    public void menu() {
+    public void game() {
+
         player Efe = new player("Efe", 'A');
 
         //insertar en un bucle
@@ -30,7 +29,7 @@ public class ODAWngeons_and_Goblins_apk {
                         combatMenuOption = check.combatMenuOption();
                         switch (combatMenuOption) {
                             case 'a' -> {
-                                
+
                             }
                             case 'b' -> {
 
@@ -49,6 +48,5 @@ public class ODAWngeons_and_Goblins_apk {
                 }
             }
         } while (gameOn);
-
     }
 }
