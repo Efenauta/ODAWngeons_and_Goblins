@@ -98,31 +98,50 @@ public class characters {
     }
 
     //funciones
-    public int golpe(char type) {
-        if (type == 'F') {
+    public char defaultStyle() {
+        switch (claseP) {
+            case 'M' -> {   //lvl 100 = 212 atq
+                return 'M';
+            }
+            case 'P' -> {   //lvl 100 = 465 atq
+                return 'M';
+            }
+            case 'A' -> {   //lvl 100 = 1482 atq
+                return 'F';
+            }
+            case 'K' -> {   //lvl 100 = 990 atq
+                return 'M';
+            }
+            case 'X' -> {   //lvl 100 = 717 atq
+                return 'F';
+            }
+            default -> {    //lvl 100 = 917 atq
+                return 'F';
+            }
+        }
+    }
+
+    public int golpeBasico() {
+        if (this.defaultStyle() == 'F') {
             return this.atq;
         } else {
             return this.Satq;
         }
     }
 
-    public int defensa(char type) {
-        if (type == 'F') {
+    public int defensa(char damageInType) {
+        if (damageInType == 'F') {
             return this.def;
         } else {
             return this.Sdef;
         }
     }
 
-    public int takeDamage(int entrada, char type) {
-        return entrada;
-    }
-
     public int takeDamage(int entrada, char type, boolean defensivo) {
         if (defensivo) {
-            return entrada - defensa(type);
+            return entrada - defensa(type) * 3 / 4;
         } else {
-            return entrada;
+            return entrada - defensa(type) / 2;
         }
     }
 

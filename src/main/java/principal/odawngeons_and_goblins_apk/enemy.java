@@ -6,6 +6,7 @@ public class enemy extends characters {
     private static final String[] descripciones = {"Troll eléctrico capaz de generar potentes descargas que paralizan a sus víctimas.", "Troll capaz de exhalar vientos anales muy intensos.", "Troll sexy caliente como una llama, quema al contacto.", "Troll húmedo, tiene una curiosa e incluso científica similitud con un Pokémon que es un perro azul...", "¡Es una mujer, corre por tu vida!"};
 
     private String descripcion;
+    private boolean stateDef = false;
 
     public enemy() {
     }
@@ -159,17 +160,72 @@ public class enemy extends characters {
         return descripcion;
     }
 
+    public boolean getStateDef() {
+        return stateDef;
+    }
+
     //funciones
     public enemy randomEnemy(int pLvl) {
         enemy e1 = new enemy((int) (Math.random() * 5), pLvl);
         return e1;
     }
 
-    public boolean state() {
-        if (Math.random() <= 0.75) {
-            return false;
-        } else {
-            return true;
+    public boolean stateDef() {
+        switch (this.getName()) {
+            case "Electroll" -> {
+                if (Math.random() <= 0.85) {
+                    stateDef = false;
+                    return stateDef;
+                } else {
+                    stateDef = true;
+                    return stateDef;
+                }
+            }
+            case "Vientroll" -> {
+                if (Math.random() <= 0.80) {
+                    stateDef = false;
+                    return stateDef;
+                } else {
+                    stateDef = true;
+                    return stateDef;
+                }
+            }
+            case "Trollama" -> {
+                if (Math.random() <= 0.90) {
+                    stateDef = false;
+                    return stateDef;
+                } else {
+                    stateDef = true;
+                    return stateDef;
+                }
+            }
+            case "Watroll" -> {
+                if (Math.random() <= 0.65) {
+                    stateDef = false;
+                    return stateDef;
+                } else {
+                    stateDef = true;
+                    return stateDef;
+                }
+            }
+            case "Mujearth" -> {
+                if (Math.random() <= 0.69) {
+                    stateDef = false;
+                    return stateDef;
+                } else {
+                    stateDef = true;
+                    return stateDef;
+                }
+            }
+            default -> {
+                if (Math.random() <= 0.75) {
+                    stateDef = false;
+                    return stateDef;
+                } else {
+                    stateDef = true;
+                    return stateDef;
+                }
+            }
         }
     }
 
