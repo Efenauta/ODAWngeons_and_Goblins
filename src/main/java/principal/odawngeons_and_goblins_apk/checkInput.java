@@ -36,7 +36,9 @@ public class checkInput {
             System.out.println("Opciones: [a]atacar     [b]bloquear");
             System.out.print("Elige una opción: ");
             try {
-                option = sc.nextLine().charAt(0);
+                if (testInput.length() == 1) {
+                    option = testInput.charAt(0);
+                }
             } catch (NumberFormatException InvalidOption) {
                 System.out.println("Elige una opción válida.");
             }
