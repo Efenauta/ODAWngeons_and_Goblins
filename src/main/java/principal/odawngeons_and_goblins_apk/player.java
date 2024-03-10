@@ -75,6 +75,11 @@ public class player extends characters {
         return luck;
     }
 
+    @Override
+    public char getClaseP() {
+        return claseP;
+    }
+
     public String getClaseP(char claseP) {
         switch (claseP) {
             case 'G' -> {
@@ -115,7 +120,7 @@ public class player extends characters {
     }
 
     private char comprobarClaseP(char claseP) {
-        if (claseP == 'M' || claseP == 'P') {
+        if (claseP == 'M' || claseP == 'P' || claseP == 'A' || claseP == 'K' || claseP == 'X') {
             return claseP;
         } else {
             return 'G';
@@ -242,4 +247,5 @@ public class player extends characters {
     public String toString() {
         return "Nombre: " + getName() + "\n\nNivel: " + getLvl() + "\nxp :    " + getXp() + "/" + nextLvl + "\nRol: " + getClaseP(this.claseP) + "\n\n  Stats:\n    hp : " + getHpNow() + "/" + getHp() + "\n    Atqaque : " + getAtq() + "       Ataque Sp. : " + getSatq() + "\n    Defensa : " + getDef() + "        Defensa Sp. : " + getSdef() + "\n    Suerte : " + luck + "0%";
     }
+
 }

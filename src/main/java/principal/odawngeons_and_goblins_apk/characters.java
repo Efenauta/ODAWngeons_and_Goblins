@@ -5,7 +5,6 @@ public class characters {
     private String name;
     private int lvl = 1;
     private int xp = 0;
-    private int nextLvl = 50;
     //clase
     private char claseP;
     //atributos
