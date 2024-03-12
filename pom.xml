@@ -31,15 +31,15 @@
         <maven.compiler.target>15</maven.compiler.target>
         <exec.mainClass>principal.odawngeons_and_goblins_apk.exeTry</exec.mainClass>
     </properties>
-    
-    <!-- JaCoCo
+  
+    <!-- JaCoCo -->
 
     <build>
         <plugins>
             <plugin>
                 <groupId>org.jacoco</groupId>
                 <artifactId>jacoco-maven-plugin</artifactId>
-                <version>0.8.5</version>
+                <version>0.8.11</version>
                 <executions>
                     <execution>
                         <id>pre-unit-test</id>
@@ -74,7 +74,5 @@
             </plugin>
         </plugins>
     </build>
-       
-    -->
     
 </project>

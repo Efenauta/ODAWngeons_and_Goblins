@@ -35,5 +35,13 @@ public class playerTest {
         char result = instance.getClaseP();
         assertEquals('G', result);
     }
+    
+    @Test
+    public void testGetClassX() {
+        System.out.println("Get Player Class");
+        player instance = new player("Prueba", 'X');
+        String result = instance.getName();
+        assertEquals("Prueba", result);
+    }
 
 }
