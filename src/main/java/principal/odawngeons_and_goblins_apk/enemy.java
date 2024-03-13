@@ -1,10 +1,13 @@
 package principal.odawngeons_and_goblins_apk;
 
+import java.util.Random;
+
 public class enemy extends characters {
 
     private static final String[] nombres = {"Electroll", "Vientroll", "Trollama", "Watroll", "Mujearth"};
     private static final String[] descripciones = {"Troll eléctrico capaz de generar potentes descargas que paralizan a sus víctimas.", "Troll capaz de exhalar vientos anales muy intensos.", "Troll sexy caliente como una llama, quema al contacto.", "Troll húmedo, tiene una curiosa e incluso científica similitud con un Pokémon que es un perro azul...", "¡Es una mujer, corre por tu vida!"};
 
+    private final Random rnd = new Random();
     private String descripcion;
     private boolean stateDef = false;
 
@@ -23,10 +26,10 @@ public class enemy extends characters {
     }
 
     private String enemyName(int id) {
-        if (id < nombres.length && id > 0) {
-            return nombres[--id];
-        } else {
+        if (id > nombres.length || id <= 0) {
             return nombres[0];
+        } else {
+            return nombres[--id];
         }
     }
 
@@ -166,7 +169,7 @@ public class enemy extends characters {
 
     //funciones
     public enemy randomEnemy(int pLvl) {
-        enemy e1 = new enemy((int) (Math.random() * 5), pLvl);
+        enemy e1 = new enemy(rnd.nextInt(1, 6), pLvl);
         return e1;
     }
 
