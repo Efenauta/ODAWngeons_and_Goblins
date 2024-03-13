@@ -45,6 +45,7 @@ public class checkInput {
         while (option == ' ') {
             System.out.println("Opciones: [a]atacar     [b]bloquear");
             System.out.print("Elige una opción: ");
+            testInput = sc.nextLine();
             try {
                 if (testInput.length() == 1) {
                     option = testInput.charAt(0);

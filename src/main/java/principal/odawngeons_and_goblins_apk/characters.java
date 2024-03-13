@@ -121,8 +121,10 @@ public abstract class characters {
 
     public int takeDamage(int entrada, char type, boolean defensivo) {
         if (defensivo) {
+            this.setHpNow(getHpNow() - (entrada - defensa(type) * 3 / 4));
             return entrada - defensa(type) * 3 / 4;
         } else {
+            this.setHpNow(getHpNow() - (entrada - defensa(type) / 2));
             return entrada - defensa(type) / 2;
         }
     }
