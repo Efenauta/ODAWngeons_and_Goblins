@@ -244,6 +244,30 @@ public class player extends characters {
     }
 
     @Override
+    public char defaultStyle() {
+        switch (claseP) {
+            case 'M' -> {   //lvl 100 = 212 atq
+                return 'M';
+            }
+            case 'P' -> {   //lvl 100 = 465 atq
+                return 'M';
+            }
+            case 'A' -> {   //lvl 100 = 1482 atq
+                return 'F';
+            }
+            case 'K' -> {   //lvl 100 = 990 atq
+                return 'M';
+            }
+            case 'X' -> {   //lvl 100 = 717 atq
+                return 'F';
+            }
+            default -> {    //lvl 100 = 917 atq
+                return 'F';
+            }
+        }
+    }
+
+    @Override
     public String toString() {
         return "Nombre: " + getName() + "\n\nNivel: " + getLvl() + "\nxp :    " + getXp() + "/" + nextLvl + "\nRol: " + getClaseP(this.claseP) + "\n\n  Stats:\n    hp : " + getHpNow() + "/" + getHp() + "\n    Atqaque : " + getAtq() + "       Ataque Sp. : " + getSatq() + "\n    Defensa : " + getDef() + "        Defensa Sp. : " + getSdef() + "\n    Suerte : " + luck + "0%";
     }

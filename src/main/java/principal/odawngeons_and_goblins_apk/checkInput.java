@@ -10,6 +10,16 @@ public class checkInput {
     public checkInput() {
     }
 
+    private static void delay(int t) {
+        for (int i = 0; i < t; i++) {
+            try {
+                // Introduce un retraso de 1 segundo (1000 milisegundos)
+                Thread.sleep(1000);
+            } catch (InterruptedException timeError) {
+            }
+        }
+    }
+
     public char menuOption() {
         char option = ' ';
         while (option == ' ') {

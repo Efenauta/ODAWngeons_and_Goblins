@@ -1,6 +1,6 @@
 package principal.odawngeons_and_goblins_apk;
 
-public class characters {
+public abstract class characters {
 
     private String name;
     private int lvl = 1;
@@ -36,7 +36,11 @@ public class characters {
     }
 
     public void setHpNow(int hpNow) {
-        this.hpNow = hpNow;
+        if (hpNow > 0) {
+            this.hpNow = hpNow;
+        } else {
+            this.hpNow = 0;
+        }
     }
 
     public void setAtq(int atq) {
@@ -97,28 +101,7 @@ public class characters {
     }
 
     //funciones
-    public char defaultStyle() {
-        switch (claseP) {
-            case 'M' -> {   //lvl 100 = 212 atq
-                return 'M';
-            }
-            case 'P' -> {   //lvl 100 = 465 atq
-                return 'M';
-            }
-            case 'A' -> {   //lvl 100 = 1482 atq
-                return 'F';
-            }
-            case 'K' -> {   //lvl 100 = 990 atq
-                return 'M';
-            }
-            case 'X' -> {   //lvl 100 = 717 atq
-                return 'F';
-            }
-            default -> {    //lvl 100 = 917 atq
-                return 'F';
-            }
-        }
-    }
+    public abstract char defaultStyle();
 
     public int golpeBasico() {
         if (this.defaultStyle() == 'F') {

@@ -173,66 +173,55 @@ public class enemy extends characters {
     public boolean stateDef() {
         switch (this.getName()) {
             case "Electroll" -> {
-                if (Math.random() <= 0.85) {
-                    stateDef = false;
-                    return stateDef;
-                } else {
-                    stateDef = true;
-                    return stateDef;
-                }
+                stateDef = Math.random() > 0.85;
             }
             case "Vientroll" -> {
-                if (Math.random() <= 0.80) {
-                    stateDef = false;
-                    return stateDef;
-                } else {
-                    stateDef = true;
-                    return stateDef;
-                }
+                stateDef = Math.random() > 0.80;
             }
             case "Trollama" -> {
-                if (Math.random() <= 0.90) {
-                    stateDef = false;
-                    return stateDef;
-                } else {
-                    stateDef = true;
-                    return stateDef;
-                }
+                stateDef = Math.random() > 0.90;
             }
             case "Watroll" -> {
-                if (Math.random() <= 0.65) {
-                    stateDef = false;
-                    return stateDef;
-                } else {
-                    stateDef = true;
-                    return stateDef;
-                }
+                stateDef = Math.random() > 0.65;
             }
             case "Mujearth" -> {
-                if (Math.random() <= 0.69) {
-                    stateDef = false;
-                    return stateDef;
-                } else {
-                    stateDef = true;
-                    return stateDef;
-                }
+                stateDef = Math.random() > 0.69;
             }
             default -> {
-                if (Math.random() <= 0.75) {
-                    stateDef = false;
-                    return stateDef;
-                } else {
-                    stateDef = true;
-                    return stateDef;
-                }
+                stateDef = Math.random() > 0.75;
             }
         }
+        return stateDef;
     }
 
     //pendiente de editar
     @Override
     public String toString() {
         return "enemy{" + "name=" + getName() + ", descripcion=" + descripcion + ", lvl=" + getLvl() + ", xp=" + getXp() + ", hp=" + getHp() + ", hpNow=" + getHpNow() + ", atq=" + getAtq() + ", Satq=" + getSatq() + ", def=" + getDef() + ", Sdef=" + getSdef() + "}";
+    }
+
+    @Override
+    public char defaultStyle() {
+        switch (this.getName()) {
+            case "Electroll" -> {
+                return 'F';
+            }
+            case "Vientroll" -> {
+                return 'M';
+            }
+            case "Trollama" -> {
+                return 'M';
+            }
+            case "Watroll" -> {
+                return 'F';
+            }
+            case "Mujearth" -> {
+                return 'M';
+            }
+            default -> {
+                return 'F';
+            }
+        }
     }
 
 }
