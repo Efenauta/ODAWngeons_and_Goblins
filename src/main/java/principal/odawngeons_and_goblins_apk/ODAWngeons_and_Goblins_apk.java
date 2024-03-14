@@ -55,14 +55,15 @@ public class ODAWngeons_and_Goblins_apk {
     public void game() {
 
         newCharacter = new player("Efe", 'A');
+        System.out.println(newCharacter.toString());
         characters.add(newCharacter);
-        ActualCharacter = 1;
+        ActualCharacter = 0;
         
         //menú
         do {
             switch (check.menuOption()) {
                 case 'a' -> {
-                    e1 = new enemy().randomEnemy(characters.get(ActualCharacter).getLvl());
+                    e1 = new enemy().randomEnemy(characters.get(0).getLvl());
                     System.out.println("\n" + e1.getName() + " se prepara para el combate.");
                     combatOn = true;
                     //menú de combate
