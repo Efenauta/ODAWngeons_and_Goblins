@@ -5,7 +5,6 @@ import java.util.ArrayList;
 public class ODAWngeons_and_Goblins_apk {
 
     private static boolean gameOn = true, combatOn = false;
-    private static char menuOption, combatMenuOption;
     private static final checkInput check = new checkInput();
     private static enemy e1;
     private static int ActualCharacter;
@@ -61,16 +60,14 @@ public class ODAWngeons_and_Goblins_apk {
         
         //menú
         do {
-            menuOption = check.menuOption();
-            switch (menuOption) {
+            switch (check.menuOption()) {
                 case 'a' -> {
                     e1 = new enemy().randomEnemy(characters.get(ActualCharacter).getLvl());
                     System.out.println("\n" + e1.getName() + " se prepara para el combate.");
                     combatOn = true;
                     //menú de combate
                     do {
-                        combatMenuOption = check.combatMenuOption();
-                        switch (combatMenuOption) {
+                        switch (check.combatMenuOption()) {
                             case 'a' -> {
                                 luchar('a');
                             }
