@@ -26,18 +26,18 @@ public class enemy extends characters {
     }
 
     private String enemyName(int id) {
-        if (id >= nombres.length || id < 0) {
-            return nombres[0];
-        } else {
+        if (id < nombres.length && id >= 0) {
             return nombres[id];
+        } else {
+            return nombres[0];
         }
     }
 
     private String enemyDescripcion(int id) {
-        if (id >= descripciones.length || id < 0) {
-            return descripcion = descripciones[0];
-        } else {
+        if (id < descripciones.length && id >= 0) {
             return descripcion = descripciones[id];
+        } else {
+            return descripcion = descripciones[0];
         }
     }
 
@@ -225,6 +225,11 @@ public class enemy extends characters {
                 return 'F';
             }
         }
+    }
+
+    @Override
+    public char getClaseP() {
+        return 'e';
     }
 
 }

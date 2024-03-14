@@ -72,9 +72,7 @@ public abstract class characters {
         return xp;
     }
 
-    public char getClaseP() {
-        return claseP;
-    }
+    public abstract char getClaseP();
 
     public int getHp() {
         return hp;
