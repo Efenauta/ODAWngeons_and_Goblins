@@ -5,8 +5,6 @@ public abstract class characters {
     private String name;
     private int lvl = 1;
     private int xp = 0;
-    //clase
-    private char claseP;
     //atributos
     private int hp;
     private int hpNow;
@@ -25,10 +23,6 @@ public abstract class characters {
 
     public void setXp(int xp) {
         this.xp = xp;
-    }
-
-    public void setClaseP(char claseP) {
-        this.claseP = claseP;
     }
 
     public void setHp(int hp) {
