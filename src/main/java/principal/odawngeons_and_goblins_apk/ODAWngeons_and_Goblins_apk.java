@@ -8,7 +8,7 @@ public class ODAWngeons_and_Goblins_apk {
     private static final checkInput check = new checkInput();
     private static enemy e1;
     private static int ActualCharacter;
-    private static ArrayList<player> characters;
+    private final ArrayList<player> characters = new ArrayList();
     private static player newCharacter;
 
     public boolean getCombatOn() {
