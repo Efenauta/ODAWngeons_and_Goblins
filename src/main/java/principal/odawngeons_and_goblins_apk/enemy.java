@@ -26,18 +26,18 @@ public class enemy extends characters {
     }
 
     private String enemyName(int id) {
-        if (id > nombres.length || id <= 0) {
+        if (id >= nombres.length || id < 0) {
             return nombres[0];
         } else {
-            return nombres[--id];
+            return nombres[id];
         }
     }
 
     private String enemyDescripcion(int id) {
-        if (id < 6 && id > 0) {
-            return descripcion = descripciones[--id];
-        } else {
+        if (id >= descripciones.length || id < 0) {
             return descripcion = descripciones[0];
+        } else {
+            return descripcion = descripciones[id];
         }
     }
 
@@ -169,7 +169,7 @@ public class enemy extends characters {
 
     //funciones
     public enemy randomEnemy(int pLvl) {
-        enemy e1 = new enemy(rnd.nextInt(1, 6), pLvl);
+        enemy e1 = new enemy(rnd.nextInt(6), pLvl);
         return e1;
     }
 
